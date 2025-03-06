@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order Now - Cafe Name</title>
+  <link rel="website icon" href="trans_bg.png">
+  <style>
+    /* Reset and base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header styling */
+a {
+      text-decoration: none;
+      color: inherit;
+    }
+    ul {
+      list-style: none;
+    }
+
+    /* Header */
+    Header {
+      background-color: rgba(237, 202, 156, 0.982);
+      padding: 1rem 5%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .logoimg{
+        width: 8%;
+        height: 90%;
+        margin-left: 0;
+        margin-top: 0;
+        position: absolute;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .logo h1 {
+      font-family: 'Playfair Display', serif;
+      color: var(--secondary-beige);
+      font-size: 2.5rem;
+      letter-spacing: 3px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .logo h1::after {
+      content: '✻';
+      position: absolute;
+      right: -25px;
+      top: -10px;
+      color: var(--accent-gold);
+      font-size: 1.2rem;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--secondary-beige);
+      font-weight: 300;
+      position: relative;
+      padding: 0.5rem 0;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent-gold);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+    
+/* Order Section Styling */
+.order-section {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.order-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Order Form Styling */
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group select,
+.form-group input[type="number"] {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Checkbox Group Styling */
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.checkbox-group label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+}
+
+/* Order Button Styling */
+.order-btn {
+  background-color: #efdcbe;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+  background-color: #f4bb5e;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  margin-top: 40px;
+}
+
+  </style>
+</head>
+<body>
+    <header>
+        <div class="logor">
+            <img src="trans_bg.png" alt="logo" class="logoimg">
+            <div class="logo">
+              <h1>Time Coffee House</h1>
+            </div>
+            <nav>
+              <ul>
+                <li><a href="another2.html">Home</a></li>
+                <li><a href="#order">Order Now</a></li>
+                <li><a  href="contactus.html">Contact</a></li>
+                 
+              </ul>
+            </nav>
+        </div>
+          </header>
+    
+
+
+  <main>
+    <section class="order-section">
+      <h2>Order Your Favorite Coffee</h2>
+      <form class="order-form">
+        <div class="form-group">
+            <label for="coffee-type">Select Coffee Type</label>
+            <select id="coffee-type" name="coffee-type">
+              <option value="espresso">Espresso</option>
+              <option value="latte">Latte</option>
+              <option value="cappuccino">Cappuccino</option>
+              <option value="americano">Americano</option>
+              <option value="none">No coffee</option>
+            </select>
+        
+            <label for="cake-type">Select Cake Type</label>
+            <select id="cake-type" name="cake-type">
+              <option value="chocolate-cake">Chocolate Cake</option>
+              <option value="vanilla-cake">Vanilla Cake</option>
+              <option value="redvelvet">Red Velvet Cake</option>
+              <option value="cheesecake">Cheesecake</option>
+              <option value="none">No cake</option>
+            </select>
+            
+            <label for="cookie-type">Select Cookie Type</label>
+            <select id="cookie-type" name="cookie-type">
+              <option value="chocolate-chip">Chocolate Chip Cookie</option>
+              <option value="oatmeal-cookie">Oatmeal Cookie</option>
+              <option value="peanut-butter">Peanut Butter Cookie</option>
+              <option value="sugar-cookie">Sugar Cookie</option>
+              <option value="none">No cookie</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="size">Select Size</label>
+          <select id="size" name="size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="quantity">Quantity</label>
+          <input type="number" id="quantity" name="quantity" min="1" value="1">
+        </div>
+        <div class="form-group">
+          <label>Extras</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="extras" value="extra-shot"> Extra Shot</label>
+            <label><input type="checkbox" name="extras" value="soy-milk"> Soy Milk</label>
+            <label><input type="checkbox" name="extras" value="almond-milk"> Almond Milk</label>
+            <label><input type="checkbox" name="extras" value="whipped-cream"> Whipped Cream</label>
+          </div>
+        </div>
+        <button type="submit" class="order-btn" id="order">Order</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cafe Name. All rights reserved.</p>
+  </footer>
+</body>
+</html>
